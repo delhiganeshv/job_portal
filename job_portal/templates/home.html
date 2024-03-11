@@ -36,103 +36,202 @@
     <link rel="icon" type="'img/png" href="../static/img/logo.png" />
 
     <style>
-      #job-post {
-        background-color: #06e55ff7;
-      }
       p {
         color: #6d6e8d;
+      }
+      a {
+        color: #6d6e8d;
+      }
+      nav {
+        position: absolute;
+        z-index: 9;
+      }
+      #banner {
+        background-image: url("../static/img/banner/banner.png");
+        height: 59vh;
+        /* background-size: cover;
+        background-position: center;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center; */
       }
     </style>
   </head>
   <body>
-    <!-- navbar starts -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a href="" class="navbar-brand"
-          ><img src="../static/img/logo.png" width="50" height="60" />JobHunt</a
-        >
-        <button
-          class="navbar-toggler"
-          type="'button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <header>
+      <!-- navbar starts -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a href="" class="navbar-brand"
+            ><img
+              src="../static/img/logo.png"
+              width="50"
+              height="60"
+            />JobHunt</a
+          >
+          <button
+            class="navbar-toggler"
+            type="'button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-            <li class="'nav-item mx-3">
-              <a href="" class="nav-link active" aria-current="page">Home</a>
-            </li>
-            <li class="'nav-item mx-3">
-              <a href="" class="nav-link">Browse jobs</a>
-            </li>
-            <li class="'nav-item mx-3">
-              <a href="" class="nav-link">Candidates</a>
-            </li>
-            <li class="'nav-item mx-3">
-              <a href="" class="nav-link">Blog</a>
-            </li>
-            <li class="'nav-item mx-3">
-              <a href="" class="nav-link">contact</a>
-            </li>
-          </ul>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-underline m-auto mb-2 mb-lg-0">
+              <li class="'nav-item mx-3">
+                <a
+                  href=""
+                  class="nav-link active link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li class="'nav-item mx-3">
+                <a
+                  href=""
+                  class="nav-link link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  >Browse jobs</a
+                >
+              </li>
+              <li class="'nav-item mx-3">
+                <a
+                  href=""
+                  class="nav-link link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  >Candidates</a
+                >
+              </li>
+              <li class="'nav-item mx-3">
+                <a
+                  href=""
+                  class="nav-link link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  >Blog</a
+                >
+              </li>
+              <li class="'nav-item mx-3">
+                <a
+                  href=""
+                  class="nav-link nav-link link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  >contact</a
+                >
+              </li>
+            </ul>
 
-          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-            <li class="nav-item" id="job-post">
-              <button class="btn">POST A JOB</button>
-            </li>
-            <li class="nav-item">
-              <button class="btn btn-primary" id="login">LOG IN</button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- navbar ends -->
-
-    <!-- main starts -->
-    <main id="lander">
-      <div class="container">
-        <div class="land">
-          <div class="col-md-6">
-            <h4>Easiest way to find a perfect job</h4>
-            <h1>Find Your Next</h1>
-            <h1>Dream Job</h1>
-            <button class="btn btn-primary">LOOKING FOR A JOB?</button>
-            <button class="btn btn-primary">FIND TALENTS</button>
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-auto" id="job-post">
+                <button class="btn btn-success">POST A JOB</button>
+              </li>
+              <li class="nav-item mx-3">
+                <button class="btn btn-primary" id="login">LOG IN</button>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="about">
+      </nav>
+
+      <!-- navbar ends -->
+    </header>
+
+    <!-- banner starts -->
+    <main id="banner">
+      <div class="container">
+        <div class="banner row">
+          <div class="col-md-6">
+            <h4 class="mt-5">Easiest way to find a perfect job</h4>
+            <h1>Find Your Next</h1>
+            <h1>Dream Job</h1>
+            <button class="btn btn-success">LOOKING FOR A JOB?</button>
+            <button class="btn btn-success">FIND TALENTS</button>
+          </div>
+          <div
+            class="col-md-6 pt-5 ilstration_img wow fadeInRight d-none d-lg-block text-right"
+            data-wow-duration="1s"
+            data-wow-delay=".2s"
+            style="
+              visibility: visible;
+              animation-duration: 1s;
+              animation-delay: 0.2s;
+              animation-name: fadeInRight;
+            "
+          >
+            <img src="../static/img/banner/illustration.png" alt="" />
+          </div>
+        </div>
+        <!-- <div class="about">
           <h1>1000+</h1>
           <h2>Browse from our top jobs</h2>
-          <!-- <p>
+         <p>
             The automated process starts as soon as your clothes go into the
             machine. The outcome is gleaming clothes. Placeholder text commonly
             used.
-          </p> -->
-        </div>
+          </p>
+        </div> -->
       </div>
     </main>
 
     <!-- categories -->
-    <main id="categories" class="categories">
+    <main id="categories">
       <div class="container">
-        <h1 class="h1-responsive text-center mb-2 fw-bold">Categories</h1>
-        <p class="text-center w-responsive mx-auto mb-5">
-          The automated process starts as soon as your clothes go into the
-          machine. The outcome is gleaming clothes. Placeholder text commonly
-          used.
-        </p>
-
         <div class="row">
-          <div class="col-md-4">
-            <div class="card box"></div>
+          <div class="col-lg-12">
+            <div class="section_title mb-40">
+              <h3>Popolar Categories</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-xl-3 col-md-6">
+            <div class="single_catagory">
+              <a href="jobs.html"><h4>Design &amp; Creative</h4></a>
+              <p><span>50</span> Available position</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-md-6">
+            <div class="single_catagory">
+              <a href="jobs.html"><h4>Marketing</h4></a>
+              <p><span>50</span> Available position</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-md-6">
+            <div class="single_catagory">
+              <a href="jobs.html"><h4>Telemarketing</h4></a>
+              <p><span>50</span> Available position</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-md-6">
+            <div class="single_catagory">
+              <a href="jobs.html"><h4>Software &amp; Web</h4></a>
+              <p><span>50</span> Available position</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-md-6">
+            <div class="single_catagory">
+              <a href="jobs.html"><h4>Administration</h4></a>
+              <p><span>50</span> Available position</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-md-6">
+            <div class="single_catagory">
+              <a href="jobs.html"><h4>Teaching &amp; Education</h4></a>
+              <p><span>50</span> Available position</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-md-6">
+            <div class="single_catagory">
+              <a href="jobs.html"><h4>Engineering</h4></a>
+              <p><span>50</span> Available position</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-md-6">
+            <div class="single_catagory">
+              <a href="jobs.html"><h4>Garments / Textile</h4></a>
+              <p><span>50</span> Available position</p>
+            </div>
           </div>
         </div>
       </div>
@@ -142,7 +241,7 @@
 
     <footer class="text-center text-lg-start border border-white mt-xl-5 pt-4">
       <!-- Grid container -->
-      <div class="container p-4">
+      <div class="p-5">
         <!--Grid row-->
         <div class="row">
           <!--Grid column-->
@@ -189,8 +288,8 @@
           <!--Grid column-->
 
           <!--Grid column-->
-          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 categories">
-            <h5 class="text-uppercase mb-4">Categories</h5>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 careers">
+            <h5 class="text-uppercase mb-4">Careers</h5>
 
             <ul class="list-unstyled">
               <li class="list-item">
