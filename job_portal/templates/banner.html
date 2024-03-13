@@ -1,0 +1,41 @@
+{% load static %}
+<!-- banner starts -->
+<main id="banner" style="background-image: url('{% static "img/banner/banner.png" %}');>
+  <div class="container">
+    <div class="banner row py-5 me-0">
+      <div class="col-md-5 py-5">
+        <h4 class="pt-5 pd-3">Easiest way to find a perfect job</h4>
+        <h1 class="pt-5">Find Your Next</h1>
+        <h1 class="pd-5">Dream Job</h1>
+        <button class="btn mt-4 me-3" style="background-color: rgb(0, 211, 99)">
+          LOOKING FOR A JOB?
+        </button>
+        <button class="btn mt-4" style="background-color: rgb(0, 211, 99)">
+          FIND TALENTS
+        </button>
+      </div>
+      <div
+        class="col-md-7 pt-5 ilstration_img wow fadeInRight d-none d-lg-block text-right"
+        data-wow-duration="1s"
+        data-wow-delay=".2s"
+        style="
+          visibility: visible;
+          animation-duration: 1s;
+          animation-delay: 0.2s;
+          animation-name: fadeInRight;
+        "
+      >
+        <img src="{% static 'img/banner/illustration.png' %}" alt="" />
+      </div>
+    </div>
+    <!-- <div class="about">
+            <h1>1000+</h1>
+            <h2>Browse from our top jobs</h2>
+           <p>
+              The automated process starts as soon as your clothes go into the
+              machine. The outcome is gleaming clothes. Placeholder text commonly
+              used.
+            </p>
+          </div> -->
+  </div>
+</main>

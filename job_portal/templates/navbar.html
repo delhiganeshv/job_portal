@@ -1,0 +1,80 @@
+{% load static %}
+<header>
+  <!-- navbar starts -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a href="" class="navbar-brand"
+        ><img
+          src="{% static 'img/logo.png' %}"
+          width="50"
+          height="60"
+        />JobHunt</a
+      >
+      <button
+        class="navbar-toggler"
+        type="'button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav nav-underline m-auto mb-2 mb-lg-0">
+          <li class="'nav-item mx-3">
+            <a
+              href=""
+              class="nav-link active link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+              aria-current="page"
+              >Home</a
+            >
+          </li>
+          <li class="'nav-item mx-3">
+            <a
+              href=""
+              class="nav-link link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+              >Browse jobs</a
+            >
+          </li>
+          <li class="'nav-item mx-3">
+            <a
+              href=""
+              class="nav-link link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+              >Candidates</a
+            >
+          </li>
+          <li class="'nav-item mx-3">
+            <a
+              href=""
+              class="nav-link link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+              >Blog</a
+            >
+          </li>
+          <li class="'nav-item mx-3">
+            <a
+              href=""
+              class="nav-link nav-link link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+              >contact</a
+            >
+          </li>
+        </ul>
+
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-auto" id="job-post">
+            <button class="btn" style="background-color: rgb(0, 211, 99)">
+              POST A JOB
+            </button>
+          </li>
+          <li class="nav-item mx-3">
+            <button class="btn btn-primary" id="login">LOG IN</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- navbar ends -->
+</header>
