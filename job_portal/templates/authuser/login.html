@@ -71,21 +71,21 @@ form{
     border-radius: 4px 4px 0 0;
     }
  h4{
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
     font-weight: 700;
  }  
  .form-label{
     font-weight: 800 !important;
  }
- @media only screen and (min-width: 577px) {
+ @media only screen and (min-width: 900px) {
     form {
-        width: 40% !important;
+        width: 30% !important;
     }
   }
 
 
 
-@media only screen and (max-width: 577px) {
+@media only screen and (max-width: 900px) {
     form {
         width: 100% !important;
     }
@@ -94,7 +94,8 @@ form{
 <body>
   <div class="container-fluid">
 
-    <form class="mx-auto">
+    <form class="mx-auto" method="post" action="">
+      {% csrf_token %}
       <div class="text-center">
         <img src="{% static 'img/logo.png' %}" type="img/png"
           style="width: 150px; height:100px" alt="logo">
@@ -102,22 +103,22 @@ form{
       </div>
         <h4 class="text-center">Login</h4>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">User Name</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <label for="exampleInputEmail1"class="form-label">User Name</label>
+          <input type="text"  name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <input type="password" class="form-control" id="exampleInputPassword1" name="password" required>
           <div id="emailHelp" class="form-text mt-3">Forget password ?</div>
         </div>
         {% if msg %}
         <p style="color: red;">{{msg}}</p>
         {% endif %}
       
-        <button type="submit" class="btn btn-primary mt-5">Login</button>
-        <div class="footer-links mt-4">
-          <a href="{% url 'register-user' %}" class="me-5">Sign Up to Apply</a>
-          <a href="{% url 'register-hr' %}">Sign Up as Hr</a>
+        <button type="submit" class="btn btn-primary mt-3">Login</button>
+        <div class="footer-links mt-4 pb-3">
+          <a href="{% url 'register-user' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Sign Up to Apply</a>
+          <a href="{% url 'register-hr' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover pull-right">Sign Up as Hr</a>
         </div>
       </form>
   <script
