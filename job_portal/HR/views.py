@@ -50,3 +50,4 @@ def acceptApplication(request):
             IsSortList(user=candidate.user,job=jobpost).save()
         return redirect('/candidatedetails/'+str(jobpostid)+"/")
     return redirect('hrdash')
+

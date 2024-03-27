@@ -23,7 +23,7 @@
   <!-- bootstrap icons -->
   <link
     rel="stylesheet"
-    href="{%static 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css' %}"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
   />
 
   <!-- icons -->
@@ -33,4 +33,112 @@
   />
 
   <link rel="icon" type="'img/png" href="{% static 'img/logo.png' %}" />
+  <style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+}
+
+body{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,14,154,1) 35%, rgba(0,212,255,1) 100%);
+    font-family: 'Poppins', sans-serif;
+
+}
+form{
+    border-radius: 20px;
+    margin-top: 50px !important;
+    width: 24% !important;
+    background-color: white !important;
+    padding: 10px 50px 10px 50px;
+}
+
+.btn-primary{
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,14,154,1) 35%, rgba(0,212,255,1) 100%);
+    
+}
+
+.form-control{
+    color: rgba(0,0,0,.87);
+    border-bottom-color: rgba(0,0,0,.42);
+    box-shadow: none !important;
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 4px 4px 0 0;
+    }
+ h4{
+    font-size: 1.5rem !important;
+    font-weight: 700;
+ }  
+ .form-label{
+    font-weight: 800 !important;
+ }
+ @media only screen and (min-width: 900px) {
+    form {
+        width: 30% !important;
+    }
+  }
+
+
+
+@media only screen and (max-width: 900px) {
+    form {
+        width: 100% !important;
+    }
+  }</style>
 </head>
+<body>
+  <div class="container-fluid mb-5">
+
+    <form class="mx-auto" method="post" action="">
+      {% csrf_token %}
+      <div class="text-center">
+        <img src="{% static 'img/logo.png' %}" type="img/png"
+          style="width: 150px; height:100px" alt="logo">
+        <h4 class="mb-1 pb-1">Your Path to success</h4>
+      </div>
+        <h4 class="text-center">Sign Up</h4>
+        <div class="mb-3">
+         
+          <input type="text"  name="username" class="form-control" id="exampleInputUsername" required placeholder="Username">
+        </div>
+        <div class="mb-3">
+          <input type="email"  name="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" required placeholder="Email Address">
+        </div>
+
+        <div class="mb-3">
+
+          <input type="password" class="form-control" id="exampleInputPassword1" name="password" required placeholder="Password">
+          </div>
+          
+        <div class="mb-3">
+   <input type="password" class="form-control" id="exampleInputPassword2" name="cpassword" required placeholder="Confirm Password">
+          </div>
+
+          
+
+
+        {% if msg %}
+        <p style="color: red;">{{msg}}</p>
+        {% endif %}
+      
+        <button type="submit" class="btn btn-primary mt-3">Register</button>
+        <div class="mt-4 pb-3">
+          <p>Already have an account? 
+            <a href="{% url 'login' %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Log in</a></p>
+        </div>
+
+      </form>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+</body>
+
+
+</html>

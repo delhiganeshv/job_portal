@@ -63,12 +63,16 @@
         </ul>
 
         <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-          <li class="nav-item mx-auto" id="job-post">
-            <button class="btn" style="background-color: rgb(0, 211, 99)">
+          <!-- <li class="nav-item mx-auto" id="job-post">
+            <button
+              class="btn"
+              style="background-color: rgb(0, 211, 99)"
+              onclick="location.href='{% url 'postjob' %}'"
+            >
               POST A JOB
             </button>
-          </li>
-          <li class="nav-item mx-3">
+          </li> -->
+          <li class="nav-item mx-auto">
             <button
               class="btn btn-primary"
               onclick="location.href='{% url 'login' %}'"
